@@ -1,0 +1,17 @@
+type NumberAdded @entity(immutable: true) {
+  id: Bytes!
+  oldValue: BigInt! # uint256
+  newValue: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NumberSubtracted @entity(immutable: true) {
+  id: Bytes!
+  oldValue: BigInt! # uint256
+  newValue: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: NumberContract
+    network: mumbai
+    source:
+      address: "0xdF62899c1E6d18168ECaD96C93CFC6fb06bEE21e"
+      abi: NumberContract
+      startBlock: 47490128
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - NumberAdded
+        - NumberSubtracted
+      abis:
+        - name: NumberContract
+          file: ./abis/NumberContract.json
+      eventHandlers:
+        - event: NumberAdded(uint256,uint256)
+          handler: handleNumberAdded
+        - event: NumberSubtracted(uint256,uint256)
+          handler: handleNumberSubtracted
+      file: ./src/number-contract.ts
