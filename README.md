@@ -14,11 +14,9 @@ They store the data in well defined manner such as databases in web2
 They Have indexers so that they retrive this data very quickly than other frameworks
 If we want same solution like graph in centralized system then we can think of Datasx
 
-# Graphs stroage works on events in solidity when ever an event in smart contract triggers particular subgraph associated with it becomes active and stores data inside that subgraph 
+### Graphs stroage works on events in solidity when ever an event in smart contract triggers particular subgraph associated with it becomes active and stores data inside that subgraph and Events in Solidity Smart Contract Triggeres Graph Storage 
 
-# Events Triggeres Graph Storage 
-
-# SubGrpah Creation Process:
+#### SubGrpah Creation Process:
 - npm install -g @graphprotocol/graph-cli
 - graph init --studio subgraphName
 - choose chain 
