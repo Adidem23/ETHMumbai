@@ -1,0 +1,265 @@
+[
+  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "ClientAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ClientName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ClientEmailId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ClientPhoneNumber",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "IntersestedConsulation",
+        "type": "string"
+      }
+    ],
+    "name": "AddedClient",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "ExpertAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ExpertName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "EmailId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "PhoneNumber",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "Expertise",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "ExpertFees",
+        "type": "uint256"
+      }
+    ],
+    "name": "AddedExpert",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "ExpertAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "RequestNumber",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ExpertName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ExpertemailAddress",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "phoneNumber",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "expertise",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "coursefees",
+        "type": "uint256"
+      }
+    ],
+    "name": "ExpertRequested",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_ExpertAddress", "type": "address" }
+    ],
+    "name": "AcceptParticularExpertRequest",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_ClientName", "type": "string" },
+      { "internalType": "string", "name": "_ClientEmailID", "type": "string" },
+      { "internalType": "string", "name": "_ClientPhone", "type": "string" },
+      {
+        "internalType": "string",
+        "name": "_InterestedConsulation",
+        "type": "string"
+      }
+    ],
+    "name": "AddClient",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "AllRequestes",
+    "outputs": [
+      { "internalType": "address", "name": "whoRequested", "type": "address" },
+      { "internalType": "bool", "name": "requestStatus", "type": "bool" },
+      { "internalType": "uint256", "name": "ReqIndex", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_Expert", "type": "address" }
+    ],
+    "name": "EnrollInExpertClass",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_ExpertName", "type": "string" },
+      { "internalType": "string", "name": "_EmailId", "type": "string" },
+      { "internalType": "string", "name": "_PhoneNumber", "type": "string" },
+      { "internalType": "string", "name": "_Expertise", "type": "string" },
+      { "internalType": "uint256", "name": "_ExpertFees", "type": "uint256" }
+    ],
+    "name": "FillExpertProfile",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "NoOfRequests",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "OneAdminMap",
+    "outputs": [
+      { "internalType": "address", "name": "WalletAddress", "type": "address" },
+      { "internalType": "string", "name": "AdminName", "type": "string" },
+      { "internalType": "string", "name": "Role", "type": "string" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "OneClientMap",
+    "outputs": [
+      { "internalType": "address", "name": "ClientAddress", "type": "address" },
+      { "internalType": "string", "name": "name", "type": "string" },
+      { "internalType": "string", "name": "emailId", "type": "string" },
+      { "internalType": "string", "name": "phoneNumber", "type": "string" },
+      {
+        "internalType": "string",
+        "name": "IntersestedConsulation",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "OneExpertMap",
+    "outputs": [
+      { "internalType": "address", "name": "ExpertAddress", "type": "address" },
+      { "internalType": "string", "name": "name", "type": "string" },
+      { "internalType": "string", "name": "emailId", "type": "string" },
+      { "internalType": "string", "name": "phoneNumber", "type": "string" },
+      { "internalType": "string", "name": "expertise", "type": "string" },
+      { "internalType": "uint256", "name": "courseFess", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "checkRequestStatus",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_expertAddress", "type": "address" }
+    ],
+    "name": "getClientsOfExpert",
+    "outputs": [
+      { "internalType": "address[]", "name": "", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "requestAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  { "stateMutability": "payable", "type": "receive" }
+]
