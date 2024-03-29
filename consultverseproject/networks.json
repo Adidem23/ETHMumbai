@@ -1,8 +1,8 @@
 {
   "mumbai": {
     "Contract": {
-      "address": "0x8753E48eE23d12fa95F9DA8a41c68D8E40442466",
-      "startBlock": 0
+      "address": "0x8753e48ee23d12fa95f9da8a41c68d8e40442466",
+      "startBlock": 47610703
     }
   }
 }

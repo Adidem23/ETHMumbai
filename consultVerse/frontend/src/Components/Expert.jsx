@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ethers } from 'ethers';
 import ABI from './ABI.json';
-import {connectAccount, connectAccount} from 'enchantmask';
+import {connectAccount} from 'enchantmask';
 
 
 
